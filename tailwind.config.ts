@@ -18,15 +18,22 @@ const config: Config = {
           600: '#2F6FEB',
         },
       },
-    },
-    keyframes: {
-      shimmer: {
-        '100%': {
-          transform: 'translateX(100%)',
+      keyframes: {
+        shimmer: {
+          '100%': {
+            transform: 'translateX(100%)',
+          },
         },
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('daisyui'),
+  ],
+  daisyui: {
+    themes: ['autumn', 'cupcake'], // puedes cambiar o añadir más temas
+  },
 };
+
 export default config;
